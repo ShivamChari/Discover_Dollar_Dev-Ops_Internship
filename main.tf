@@ -214,6 +214,7 @@ resource "aws_instance" "VM" {
 }
  user_data =  <<-EOF
                #!/bin/bash
-               ping 192.168.1.0/24
+               /sbin/ifconfig
+               /sbin/ifconfig en0
                EOF
 }
